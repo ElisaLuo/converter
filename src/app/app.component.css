@@ -1,0 +1,29 @@
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: #69B8D6;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.header{
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    color: white;
+    margin-left: 60px;
+}
+.item{
+    color: white;
+    float: right;
+    padding: 18px 13px 15px 13px;
+    margin-top: -45px;
+}
+.item:hover{
+    background-color: #5599b2;
+}
+.active{
+    background-color: #5090a8;
+}
+.content{
+    margin-right: 60px;
+}

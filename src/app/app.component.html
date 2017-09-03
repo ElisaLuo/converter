@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<div class="menu">
+    <div class="header">
+        <a class="head" routerLink="">Converter</a>
+    </div>
+    <div class="content">
+        <a class="item" routerLink="area" [routerLinkActive]="['active']">Area</a>
+        <a class="item" routerLink="length" [routerLinkActive]="['active']">Length</a>
+        <a class="item" routerLink="mass" [routerLinkActive]="['active']">Mass</a>
+        <a class="item" routerLink="speed" [routerLinkActive]="['active']">Speed</a>
+        <a class="item" routerLink="temperature" [routerLinkActive]="['active']">Temperature</a>
+        <a class="item" routerLink="volume" [routerLinkActive]="['active']">Volume</a>
+    </div>
+</div>
+<router-outlet></router-outlet>

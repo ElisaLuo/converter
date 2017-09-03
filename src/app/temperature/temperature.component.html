@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Temperature</h1>
+    <input type="text" #tempNewNumber [(ngModel)]="tempNumber" (input)="calculateTemp(tempNewNumber.value, tempFirst, tempSecond);"/>
+    <select [(ngModel)]="tempFirst" (change)="calculateTemp(tempNewNumber.value, tempFirst, tempSecond);">
+        <option>Kelvin</option>
+        <option>Celcius</option>
+        <option>Fahrenheit</option>
+    </select>
+    <input [(ngModel)]="tempAnswer" readonly />
+    <select [(ngModel)]="tempSecond" (change)="calculateTemp(tempNewNumber.value, tempFirst, tempSecond);">
+        <option>Kelvin</option>
+        <option>Celcius</option>
+        <option>Fahrenheit</option>
+    </select>
+</div>

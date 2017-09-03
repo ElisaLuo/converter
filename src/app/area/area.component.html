@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Area</h1>
+    <input type="text" #areaNewNumber [(ngModel)]="areaNumber" (input)="calculateArea(areaNewNumber.value, areaFirst, areaSecond);"/>
+    <select [(ngModel)]="areaFirst" (change)="calculateArea(areaNewNumber.value, areaFirst, areaSecond);">
+        <option>Square Inches</option>
+        <option>Square Feet</option>
+        <option>Square Yards</option>
+        <option>Square Miles</option>
+        <option>Square Millimeters</option>
+        <option>Square Centimeters</option>
+        <option>Square Meters</option>
+        <option>Square Kilometers</option>
+        <option>Acres</option>
+        <option>Hectares</option>
+    </select>
+    <input [(ngModel)]="areaAnswer" readonly/>
+    <select [(ngModel)]="areaSecond" (change)="calculateArea(areaNewNumber.value, areaFirst, areaSecond);">
+        <option>Square Inches</option>
+        <option>Square Feet</option>
+        <option>Square Yards</option>
+        <option>Square Miles</option>
+        <option>Square Millimeters</option>
+        <option>Square Centimeters</option>
+        <option>Square Meters</option>
+        <option>Square Kilometers</option>
+        <option>Acres</option>
+        <option>Hectares</option>
+    </select>
+</div>
