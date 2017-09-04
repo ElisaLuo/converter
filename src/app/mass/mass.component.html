@@ -1,3 +1,27 @@
-<p>
-  mass works!
-</p>
+<div class="container">
+    <h1>Mass</h1>
+    <input type="text" #massNewNumber [(ngModel)]="massNumber" (input)="calculateMass(massNewNumber.value, massFirst, massSecond);"/>
+    <select [(ngModel)]="massFirst" (change)="calculateMass(massNewNumber.value, massFirst, massSecond);">
+        <option>Ounces</option>
+        <option>Pounds</option>
+        <option>Stones</option>
+        <option>Long Tons</option>
+        <option>Short Tons</option>
+        <option>Milligrams</option>
+        <option>Grams</option>
+        <option>Kilograms</option>
+        <option>Metric Tonnes</option>
+    </select>
+    <input [(ngModel)]="massAnswer" readonly/>
+    <select [(ngModel)]="massSecond" (change)="calculateMass(massNewNumber.value, massFirst, massSecond);">
+        <option>Ounces</option>
+        <option>Pounds</option>
+        <option>Stones</option>
+        <option>Long Tons</option>
+        <option>Short Tons</option>
+        <option>Milligrams</option>
+        <option>Grams</option>
+        <option>Kilograms</option>
+        <option>Metric Tonnes</option>
+    </select>
+</div>

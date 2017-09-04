@@ -1,3 +1,49 @@
-<p>
-  volume works!
-</p>
+<div class="container">
+    <h1>Volume</h1>
+    <input type="text" #volumeNewNumber [(ngModel)]="volumeNumber" (input)="calculateVolume(volumeNewNumber.value, volumeFirst, volumeSecond);"/>
+    <select [(ngModel)]="volumeFirst" (change)="calculateVolume(volumeNewNumber.value, volumeFirst, volumeSecond);">
+        <option>Cubic Inches</option>
+        <option>Cubic Feet</option>
+        <option>Imperial Gallons</option>
+        <option>Imperial Quarts</option>
+        <option>Imperial Pints</option>
+        <option>Imperial Cups</option>
+        <option>Imperial Ounces</option>
+        <option>Imperial Tablespoons</option>
+        <option>Imperial Teaspoons</option>
+        <option>US Gallons</option>
+        <option>US Quarts</option>
+        <option>US Pints</option>
+        <option>US Cups</option>
+        <option>US Ounces</option>
+        <option>US Tablespoons</option>
+        <option>US Teaspoons</option>
+        <option>Cubic Centimeters</option>
+        <option>Cubic Meters</option>
+        <option>Liters</option>
+        <option>Milliliters</option>
+    </select>
+    <input [(ngModel)]="volumeAnswer" readonly/>
+    <select [(ngModel)]="volumeSecond" (change)="calculateVolume(volumeNewNumber.value, volumeFirst, volumeSecond);">
+        <option>Cubic Inches</option>
+        <option>Cubic Feet</option>
+        <option>Imperial Gallons</option>
+        <option>Imperial Quarts</option>
+        <option>Imperial Pints</option>
+        <option>Imperial Cups</option>
+        <option>Imperial Ounces</option>
+        <option>Imperial Tablespoons</option>
+        <option>Imperial teaspoons</option>
+        <option>US Gallons</option>
+        <option>US Quarts</option>
+        <option>US Pints</option>
+        <option>US Cups</option>
+        <option>US Ounces</option>
+        <option>US Tablespoons</option>
+        <option>US Teaspoons</option>
+        <option>Cubic Centimeters</option>
+        <option>Cubic Meters</option>
+        <option>Liters</option>
+        <option>Milliliters</option>
+    </select>
+</div>

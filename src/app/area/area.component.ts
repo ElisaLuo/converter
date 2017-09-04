@@ -91,6 +91,9 @@ export class AreaComponent implements OnInit {
 
   ngOnInit() {
     this.areaNumber = '0';
+    this.areaAnswer = '0';
+    this.areaFirst = 'Square Inches';
+    this.areaSecond = 'Square Inches';
   }
 
 }
