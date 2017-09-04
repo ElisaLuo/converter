@@ -50,34 +50,34 @@ export class AreaComponent implements OnInit {
     }
     switch(optionTwo){
       case 'Square Inches':
-        this.areaAnswer = ((Math.round((parseInt(result)/6.4516)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/6.4516)*100)/100).toString();
         break;
       case 'Square Feet':
-        this.areaAnswer = ((Math.round((parseInt(result)/929.0304)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/929.0304)*100)/100).toString();
         break;
       case 'Square Yards':
-        this.areaAnswer = ((Math.round((parseInt(result)*8361.2736)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/8361.2736)*100)/100).toString();
         break;
       case 'Square Miles':
-        this.areaAnswer = ((Math.round((parseInt(result)/25899881103.36)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/25899881103.36)*100)/100).toString();
         break;
       case 'Square Millimeters':
-        this.areaAnswer = ((Math.round((parseInt(result)/0.01)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/0.01)*100)/100).toString();
         break;
       case 'Square Centimeters':
-        this.areaAnswer = ((Math.round((parseInt(result)/1)*100))/100).toString();
+        this.areaAnswer = result;
         break;
       case 'Square Meters':
-        this.areaAnswer = ((Math.round((parseInt(result)/10000)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/10000)*100)/100).toString();
         break;
       case 'Square Kilometers':
-        this.areaAnswer = ((Math.round((parseInt(result)/10000000000)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/10000000000)*100)/100).toString();
         break;
       case 'Acres':
-        this.areaAnswer = ((Math.round((parseInt(result)/40468564.224)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/40468564.224)*100)/100).toString();
         break;
       case 'Hectares':
-        this.areaAnswer = ((Math.round((parseInt(result)/100000000)*100))/100).toString();
+        this.areaAnswer = (Math.round((parseInt(result)/100000000)*100)/100).toString();
         break;
       }
     }

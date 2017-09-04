@@ -134,7 +134,7 @@ export class VolumeComponent implements OnInit {
           this.volumeAnswer = (parseInt(result)/1000).toString();
           break;
         case 'Liters':
-          this.volumeAnswer = (parseInt(result)/1).toString();
+          this.volumeAnswer = result;
           break;
         case 'Milliliters':
           this.volumeAnswer = (parseInt(result)/0.001).toString();

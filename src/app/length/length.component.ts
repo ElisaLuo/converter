@@ -62,7 +62,7 @@ export class LengthComponent implements OnInit {
           this.lengthAnswer = (Math.round((parseInt(result)/0.01)*100)/100).toString()
           break;
         case 'Meters':
-          this.lengthAnswer = (Math.round((parseInt(result)/1)*100)/100).toString()
+          this.lengthAnswer = result;
           break;
         case 'Kilometers':
           this.lengthAnswer = (Math.round((parseInt(result)/1000)*100)/100).toString()

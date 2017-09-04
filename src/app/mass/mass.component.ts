@@ -68,7 +68,7 @@ export class MassComponent implements OnInit {
           this.massAnswer = (Math.round((parseInt(result)/0.001)*10000)/10000).toString();
           break;
         case 'Kilograms':
-          this.massAnswer = (Math.round((parseInt(result)/1)*10000)/10000).toString();
+          this.massAnswer = result;
           break;
         case 'Metric Tonnes':
           this.massAnswer = (Math.round((parseInt(result)/1000)*10000)/10000).toString();
