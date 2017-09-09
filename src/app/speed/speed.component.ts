@@ -15,36 +15,38 @@ export class SpeedComponent implements OnInit {
     var result;
     if(optionOne == optionTwo){
       this.speedAnswer = value;
+    }else if(value.length == 0){
+      this.speedAnswer = "";
     }else{
       switch(optionOne){
         case 'Feet per second':
-          result = (Math.round((parseInt(value)*0.592484)*10000)/10000).toString();
+          result = (parseInt(value)*0.592484);
           break;
         case 'Miles per hour':
-          result = (Math.round((parseInt(value)*0.868976)*10000)/10000).toString();
+          result = (parseInt(value)*0.868976);
           break;
         case 'Meters per second':
-          result = (Math.round((parseInt(value)*1.94384)*10000)/10000).toString();
+          result = (parseInt(value)*1.94384);
           break;
         case 'Kilometers per hour':
-          result = (Math.round((parseInt(value)*0.539957)*10000)/10000).toString();
+          result = (parseInt(value)*0.539957);
           break;
         case 'Knots':
-          result = (parseInt(value)*1).toString();
+          result = (parseInt(value));
           break;
       }
       switch(optionTwo){
         case 'Feet per second':
-          this.speedAnswer = ((Math.round((parseInt(result)/0.592484)*10000))/10000).toString();
+          this.speedAnswer = ((result)/0.592484).toString();
           break;
         case 'Miles per hour':
-          this.speedAnswer = ((Math.round((parseInt(result)/0.868976)*10000))/10000).toString();
+          this.speedAnswer = ((result)/0.868976).toString();
           break;
         case 'Meters per second':
-          this.speedAnswer = ((Math.round((parseInt(result)/1.94384)*10000))/10000).toString();
+          this.speedAnswer = ((result)/1.94384).toString();
           break;
         case 'Kilometers per hour':
-          this.speedAnswer = ((Math.round((parseInt(result)/0.539957)*10000))/10000).toString();
+          this.speedAnswer = ((result)/0.539957).toString();
           break;
         case 'Knots':
           this.speedAnswer = result;
@@ -57,6 +59,8 @@ export class SpeedComponent implements OnInit {
   ngOnInit() {
     this.speedAnswer = '0';
     this.speedNumber = '0';
+    this.speedFirst = 'Feet per second';
+    this.speedSecond = 'Feet per second';
   }
 }
 

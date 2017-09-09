@@ -1,19 +1,28 @@
 <div class="container">
     <h1>Speed</h1>
-    <input type="text" #speedNewNumber [(ngModel)]="speedNumber" (input)="calculateSpeed(speedNewNumber.value, speedFirst, speedSecond);"/>
-    <select [(ngModel)]="speedFirst" (change)="calculateSpeed(speedNewNumber.value, speedFirst, speedSecond);">
-        <option>Feet per second</option>
-        <option>Miles per hour</option>
-        <option>Meters per second</option>
-        <option>Kilometers per hour</option>
-        <option>Knots</option>
-    </select>
-    <input [(ngModel)]="speedAnswer" readonly/>
-    <select [(ngModel)]="speedSecond" (change)="calculateSpeed(speedNewNumber.value, speedFirst, speedSecond);">
-        <option>Feet per second</option>
-        <option>Miles per hour</option>
-        <option>Meters per second</option>
-        <option>Kilometers per hour</option>
-        <option>Knots</option>
-    </select>
+    <div class="form">
+        <div class = "input">
+            <input type="text" #speedNewNumber [(ngModel)]="speedNumber" (input)="calculateSpeed(speedNewNumber.value, speedFirst, speedSecond);"/>
+            <select [(ngModel)]="speedFirst" (change)="calculateSpeed(speedNewNumber.value, speedFirst, speedSecond);">
+                <option>Feet per second</option>
+                <option>Miles per hour</option>
+                <option>Meters per second</option>
+                <option>Kilometers per hour</option>
+                <option>Knots</option>
+            </select>
+        </div>
+        <div class="equals">
+            <span class="equals">=</span>
+        </div>
+        <div class="output">
+            <input [(ngModel)]="speedAnswer" readonly/>
+            <select [(ngModel)]="speedSecond" (change)="calculateSpeed(speedNewNumber.value, speedFirst, speedSecond);">
+                <option>Feet per second</option>
+                <option>Miles per hour</option>
+                <option>Meters per second</option>
+                <option>Kilometers per hour</option>
+                <option>Knots</option>
+            </select>
+        </div>
+    </div>
 </div>

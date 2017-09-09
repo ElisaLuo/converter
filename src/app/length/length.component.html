@@ -1,25 +1,34 @@
 <div class="container">
     <h1>Length</h1>
-    <input type="text" #lengthNewNumber [(ngModel)]="lengthNumber" (input)="calculateLength(lengthNewNumber.value, lengthFirst, lengthSecond);"/>
-    <select [(ngModel)]="lengthFirst" (change)="calculateLength(lengthNewNumber.value, lengthFirst, lengthSecond);">
-        <option>Inches</option>
-        <option>Feet</option>
-        <option>Yards</option>
-        <option>Miles</option>
-        <option>Millimeters</option>
-        <option>Centimeters</option>
-        <option>Meters</option>
-        <option>Kilometers</option>
-    </select>
-    <input [(ngModel)]="lengthAnswer" readonly/>
-    <select [(ngModel)]="lengthSecond" (change)="calculateLength(lengthNewNumber.value, lengthFirst, lengthSecond);">
-        <option>Inches</option>
-        <option>Feet</option>
-        <option>Yards</option>
-        <option>Miles</option>
-        <option>Millimeters</option>
-        <option>Centimeters</option>
-        <option>Meters</option>
-        <option>Kilometers</option>
-    </select>
+    <div class="form">
+        <div class = "input">
+            <input type="text" #lengthNewNumber [(ngModel)]="lengthNumber" (input)="calculateLength(lengthNewNumber.value, lengthFirst, lengthSecond);"/>
+            <select [(ngModel)]="lengthFirst" (change)="calculateLength(lengthNewNumber.value, lengthFirst, lengthSecond);">
+                <option>Inches</option>
+                <option>Feet</option>
+                <option>Yards</option>
+                <option>Miles</option>
+                <option>Millimeters</option>
+                <option>Centimeters</option>
+                <option>Meters</option>
+                <option>Kilometers</option>
+            </select>
+        </div>
+        <div class="equals">
+            <span class="equals">=</span>
+        </div>
+        <div class="output">
+            <input [(ngModel)]="lengthAnswer" readonly/>
+            <select [(ngModel)]="lengthSecond" (change)="calculateLength(lengthNewNumber.value, lengthFirst, lengthSecond);">
+                <option>Inches</option>
+                <option>Feet</option>
+                <option>Yards</option>
+                <option>Miles</option>
+                <option>Millimeters</option>
+                <option>Centimeters</option>
+                <option>Meters</option>
+                <option>Kilometers</option>
+            </select>
+        </div>
+    </div>
 </div>

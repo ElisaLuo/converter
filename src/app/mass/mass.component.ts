@@ -15,63 +15,65 @@ export class MassComponent implements OnInit {
     var result;
     if(optionOne == optionTwo){
       this.massAnswer = value;
+    }else if(value.length == 0){
+      this.massAnswer = "";
     }else{
       switch(optionOne){
         case 'Ounces':
-          result = (parseInt(value)*0.0283495).toString();
+          result = (parseInt(value)*0.0283495);
           break;
         case 'Pounds':
-          result = (parseInt(value)*0.453592).toString();
+          result = (parseInt(value)*0.453592);
           break;
         case 'Stones':
-          result = (parseInt(value)*6.35029).toString();
+          result = (parseInt(value)*6.35029);
           break;
         case 'Long Tons':
-          result = (parseInt(value)*1016.05).toString();
+          result = (parseInt(value)*1016.05);
           break;
         case 'Short Tons':
-          result = (parseInt(value)*907.185).toString();
+          result = (parseInt(value)*907.185);
           break;
         case 'Milligrams':
-          result = (parseInt(value)*0.000001).toString();
+          result = (parseInt(value)*0.000001);
           break;
         case 'Grams':
-          result = (parseInt(value)*0.001).toString();
+          result = (parseInt(value)*0.001);
           break;
         case 'Kilograms':
-          result = (parseInt(value)*1).toString();
+          result = (parseInt(value)*1);
           break;
         case 'Metric Tonnes':
-          result = (parseInt(value)*1000).toString();
+          result = (parseInt(value)*1000);
           break;
       }
       switch(optionTwo){
         case 'Ounces':
-          this.massAnswer = (Math.round((parseInt(result)/0.0283495)*10000)/10000).toString();
+          this.massAnswer = ((result)/0.0283495).toString();
           break;
         case 'Pounds':
-          this.massAnswer = (Math.round((parseInt(result)/0.453592)*10000)/10000).toString();
+          this.massAnswer = ((result)/0.453592).toString();
           break;
         case 'Stones':
-          this.massAnswer = (Math.round((parseInt(result)/6.35029)*10000)/10000).toString();
+          this.massAnswer = ((result)/6.35029).toString();
           break;
         case 'Long Tons':
-          this.massAnswer = (Math.round((parseInt(result)/1016.05)*10000)/10000).toString();
+          this.massAnswer = ((result)/1016.05).toString();
           break;
         case 'Short Tons':
-          this.massAnswer = (Math.round((parseInt(result)/907.185)*10000)/10000).toString();
+          this.massAnswer = ((result)/907.185).toString();
           break;
         case 'Milligrams':
-          this.massAnswer = (Math.round((parseInt(result)/0.000001)*10000)/10000).toString();
+          this.massAnswer = ((result)/0.000001).toString();
           break;
         case 'Grams':
-          this.massAnswer = (Math.round((parseInt(result)/0.001)*10000)/10000).toString();
+          this.massAnswer = ((result)/0.001).toString();
           break;
         case 'Kilograms':
           this.massAnswer = result;
           break;
         case 'Metric Tonnes':
-          this.massAnswer = (Math.round((parseInt(result)/1000)*10000)/10000).toString();
+          this.massAnswer = ((result)/1000).toString();
           break;
       }
     }

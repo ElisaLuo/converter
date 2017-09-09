@@ -15,51 +15,53 @@ export class LengthComponent implements OnInit {
     var result;
     if(optionOne == optionTwo){
       this.lengthAnswer = value;
+    }else if(value.length == 0){
+      this.lengthAnswer = "";
     }else{
       switch(optionOne){
         case 'Inches':
-          result = (parseInt(value)*0.0254).toString()
+          result = (parseInt(value)*0.0254);
           break;
         case 'Feet':
-          result = (parseInt(value)*0.3048).toString()
+          result = (parseInt(value)*0.3048);
           break;
         case 'Yards':
-          result = (parseInt(value)*0.9144).toString()
+          result = (parseInt(value)*0.9144);
           break;
         case 'Miles':
-          result = (parseInt(value)*1609.34).toString()
+          result = (parseInt(value)*1609.34);
           break;
         case 'Millimeters':
-          result = (parseInt(value)*0.001).toString()
+          result = (parseInt(value)*0.001);
           break;
         case 'Centimeters':
-          result = (parseInt(value)*0.01).toString()
+          result = (parseInt(value)*0.01);
           break;
         case 'Meters':
-          result = (parseInt(value)*1).toString()
+          result = (parseInt(value)*1);
           break;
         case 'Kilometers':
-          result = (parseInt(value)*1000).toString()
+          result = (parseInt(value)*1000);
           break;
       }
       switch (optionTwo){
         case 'Inches':
-          this.lengthAnswer = (Math.round((parseInt(result)/0.0254)*100)/100).toString()
+          this.lengthAnswer = (Math.round(((result)/0.0254)*10000)/10000).toString()
           break;
         case 'Feet':
-          this.lengthAnswer = (Math.round((parseInt(result)/0.3048)*100)/100).toString()
+          this.lengthAnswer = (Math.round(((result)/0.3048)*10000)/10000).toString()
           break;
         case 'Yards':
-          this.lengthAnswer = (Math.round((parseInt(result)/0.9144)*100)/100).toString()
+          this.lengthAnswer = (Math.round(((result)/0.9144)*10000)/10000).toString()
           break;
         case 'Miles':
-          this.lengthAnswer = (Math.round((parseInt(result)/1609.34)*100)/100).toString()
+          this.lengthAnswer = (Math.round(((result)/1609.34)*10000)/10000).toString()
           break;
         case 'Millimeters':
-          this.lengthAnswer = (Math.round((parseInt(result)/0.001)*100)/100).toString()
+          this.lengthAnswer = (Math.round(((result)/0.001)*10000)/10000).toString()
           break;
         case 'Centimeters':
-          this.lengthAnswer = (Math.round((parseInt(result)/0.01)*100)/100).toString()
+          this.lengthAnswer = (Math.round(((result)/0.01)*10000)/10000).toString()
           break;
         case 'Meters':
           this.lengthAnswer = result;
@@ -77,6 +79,8 @@ export class LengthComponent implements OnInit {
   ngOnInit() {
     this.lengthAnswer = '0';
     this.lengthNumber = '0';
+    this.lengthFirst = 'Inches';
+    this.lengthSecond = 'Inches';
   }
 }
 

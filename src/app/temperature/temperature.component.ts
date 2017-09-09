@@ -14,7 +14,11 @@ export class TemperatureComponent implements OnInit {
   calculateTemp(value, optionOne, optionTwo){
     if(optionOne == optionTwo){
       this.tempAnswer = value;
-    }else if(optionOne == "Kelvin"){
+    }
+    else if(value.length == 0){
+      this.tempAnswer = "";
+    }
+    else if(optionOne == "Kelvin"){
       switch(optionTwo){
         case 'Celcius':
           this.tempAnswer = (Math.round((parseInt(value)-273.15)*100)/100).toString();
@@ -47,6 +51,9 @@ export class TemperatureComponent implements OnInit {
 
   ngOnInit() {
     this.tempNumber = '0';
+    this.tempAnswer = '0';
+    this.tempFirst = 'Kelvin';
+    this.tempSecond = 'Kelvin';
   }
 
 }
