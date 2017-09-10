@@ -4,7 +4,7 @@ const path = require('path');
 
 //app set up
 app.use(express.static(__dirname+'/dist'));
-app.use(express.static(__dirname+'/particles.json'));
+app.use(express.static(__dirname+'/src/particles.json'));
 app.listen(process.env.PORT || 8080);
 
 app.get('/*', function(req, res){
