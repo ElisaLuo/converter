@@ -5,9 +5,7 @@ const path = require('path');
 //app set up
 app.use(express.static(__dirname+'/dist'));
 app.listen(process.env.PORT || 8080);
-app.get('/particles.json', function(req, res){
-    res.sendFile(path.join(__dirname + '/dist/particles.json'));
-})
+
 app.get('/*', function(req, res){
     res.sendFile(path.join(__dirname + '/dist/index.html'));
 })
