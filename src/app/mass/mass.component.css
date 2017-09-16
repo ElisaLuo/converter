@@ -8,13 +8,13 @@ h1{
     display: inline-block;
     width: 45%;
     float: left;
-    min-width: 300px;
+    min-width: 290px;
 }
 .output{
     display: inline-block;
     width: 45%;
     float: right;
-    min-width: 300px;
+    min-width: 290px;
 }
 .equals{
     margin-top: 10px;
