@@ -11,6 +11,7 @@ import { SpeedComponent } from './speed/speed.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { VolumeComponent } from './volume/volume.component';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routes
+    routes,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

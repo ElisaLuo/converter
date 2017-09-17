@@ -1,0 +1,13 @@
+.container{
+    margin-top: 80px;
+}
+.button{
+    width: 32.5%;
+    height: 20vw;
+    margin: 0px 0px 2px 0px;
+    border: none;
+    border-radius: 0;
+    z-index: 1;
+    font-size: 3vw;
+    padding-top: 8%;
+}
